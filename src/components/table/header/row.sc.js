@@ -11,6 +11,7 @@ const row = λ.tr`
     padding: 20px;
     text-align: left;
   }
+
   > th:first-child{
     border-radius: 6px 0 0 6px;
   }

@@ -1,3 +1,11 @@
+const capitalize = str => (
+  str.charAt(0).toUpperCase() + str.slice(1)
+)
+
+const toCapitalize = text => (
+  text.split(` `).map(capitalize).join(` `)
+)
+
 function random(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
@@ -13,23 +21,24 @@ function genFollowers() {
     const url = `https://randomuser.me/api/portraits/${gender}/${id}.jpg`
     result.push(url)
   }
+
   return result
 }
 
-const normalize = rawData => rawData.results.map(item => ({
+const pickData = ({results}) => results.map(item => ({
   id: item.login.uuid,
-  imgUrl: `https://picsum.photos/80/80/?random&id=${item.login.uuid}`,
-  fullName: `${item.name.first} ${item.name.last}`,
+  address: toCapitalize(`${item.location.street}, ${item.location.city} `),
   email: item.email,
-  address: `${item.location.street}, ${item.location.city} `,
-  followers: genFollowers()
+  followers: genFollowers(),
+  fullName: toCapitalize(`${item.name.first} ${item.name.last}`),
+  imgUrl: `https://picsum.photos/80/80/?random&id=${item.login.uuid}`,
 }))
 
 const fetchData = setData => () => {
   fetch(`https://randomuser.me/api/?nat=us,dk,fr,gb&results=10`)
     .then(response => response.json())
-    .then(rawData => normalize(rawData))
-    .then(result => setData(result))
+    .then(pickData)
+    .then(setData)
 }
 
 export default fetchData

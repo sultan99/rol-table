@@ -6,10 +6,10 @@ const dataTable = ({rowKey, columns, actions, data}) => (
   table(
     header(columns),
     body({
-      rowKey,
-      columns,
       actions,
+      columns,
       data,
+      rowKey,
     })
   )
 )

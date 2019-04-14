@@ -2,11 +2,11 @@ import λ from 'react-on-lambda'
 import description from './description.sc'
 import title from './title.sc'
 
-const caption = ({name, info}) => (
+const titleDesc = (caption, info) => (
   λ.div(
-    title(name),
+    title(caption),
     description(info)
   )
 )
 
-export default caption
+export default titleDesc

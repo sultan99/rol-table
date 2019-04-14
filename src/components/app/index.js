@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import λ from 'react-on-lambda'
 import columns from './columns'
 import fetchData from './fetch-data'
@@ -15,9 +15,9 @@ function app() {
   useEffect(fetchData(setData), [])
 
   return wrapper(
-    header(`Test table`),
+    header(`Table - React on λambda`),
     table({
-      actions: [onRemove],
+      actions: {onRemove},
       columns,
       data,
       rowKey: `id`,

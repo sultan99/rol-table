@@ -1,38 +1,37 @@
-## Table
-Sample table component written using [react on lambda](https://github.com/sultan99/react-on-lambda).
-<br/>
+## Demo project
+Application is written using [react on lambda](https://github.com/sultan99/react-on-lambda).
+Live demo at [codesandbox](https://codesandbox.io/s/jjlo9m5jq5)
+
+<img src="./preview.png" />
+
 <br/>
 
 ## Getting started
 Don't warry be magic 🧙‍
 
-🧙‍ Two magic commands to get the project:
+🧙‍ Three magic commands to get the project:
 ```sh
 $ git clone git@github.com:sultan99/rol-table.git
 $ cd rol-table
+$ npm i
 ```
 <br/>
 
-🧙‍ Two magic commands to start:
+🧙‍ Two magic words to start:
 ```sh
-$ npm i
 $ npm start
 ```
+<br/>
+
+🧙 One magic link to get involved: [http://localhost:8080](http://localhost:8080/)
 <br/>
 <br/>
 
 ## Build
-You can check the bundle size of application by running:
+🧙‍ Three magic words to build:
 ```sh
 $ npm run build
 ```
 <br/>
-Check dist folder and find 2 tiny files.
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-Made in [atom](https://atom.io) with 🧡 for 🤖👾👽 and other good guys.
+Check `dist` folder for output.
