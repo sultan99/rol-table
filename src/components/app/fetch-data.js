@@ -1,9 +1,9 @@
-const capitalize = str => (
+const capitalizeWord = str => (
   str.charAt(0).toUpperCase() + str.slice(1)
 )
 
-const toCapitalize = text => (
-  text.split(` `).map(capitalize).join(` `)
+const capitalize = text => (
+  text.split(` `).map(capitalizeWord).join(` `)
 )
 
 function random(min, max) {
@@ -27,10 +27,10 @@ function genFollowers() {
 
 const pickData = ({results}) => results.map(item => ({
   id: item.login.uuid,
-  address: toCapitalize(`${item.location.street}, ${item.location.city} `),
+  address: capitalize(`${item.location.street.name}, ${item.location.city} `),
   email: item.email,
   followers: genFollowers(),
-  fullName: toCapitalize(`${item.name.first} ${item.name.last}`),
+  fullName: capitalize(`${item.name.first} ${item.name.last}`),
   imgUrl: `https://picsum.photos/80/80/?random&id=${item.login.uuid}`,
 }))
 
