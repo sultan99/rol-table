@@ -7,7 +7,7 @@ Live demo at [codesandbox](https://codesandbox.io/s/jjlo9m5jq5)
 <br/>
 
 ## Getting started
-Don't warry be magic 🧙‍
+Don't worry be magic 🧙‍
 
 🧙‍ Three magic commands to get the project:
 ```sh
